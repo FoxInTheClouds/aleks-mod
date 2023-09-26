@@ -1,0 +1,29 @@
+{
+
+  "manifest_version": 3,
+  "name": "AleksModChrome",
+  "version": "1.0.0",
+
+  "description": "Makes Aleks math look how you want it to.",
+  "icons": {
+    "16":"16.png",
+    "48":"48.png",
+    "128":"128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.aleks.com/*"],
+      "js": ["aleksmod.js", "jquery-3.7.0.js"]
+    }
+  ],
+
+  "action": {
+    "default_title": "AleksMod",
+    "default_popup": "./options.html"
+  },
+
+  "permissions": ["storage"]
+
+}  
+

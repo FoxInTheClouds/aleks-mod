@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "AleksMod",
+  "version": "1.0",
+
+  "description": "Makes Aleks math look how you want it to.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.aleks.com/*"],
+      "js": ["aleksmod.js", "jquery-3.7.0.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_title": "AleksMod",
+    "default_popup": "./options.html"
+  },
+
+  "permissions": ["storage"],
+
+  "browser_specific_settings": {
+      "gecko": {
+        "id": "kyanschmidt1@gmail.com"
+      }
+    }
+  }
